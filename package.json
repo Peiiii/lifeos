@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "next lint"
+    "upload:web": "ossutil64 cp -r -u dist oss://lifeos2 -c ./.ossutilconfig.local",
+    "deploy:web": "pnpm build && pnpm upload:web"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
